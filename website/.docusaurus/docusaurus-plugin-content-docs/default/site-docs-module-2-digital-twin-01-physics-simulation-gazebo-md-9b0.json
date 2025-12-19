@@ -1,0 +1,28 @@
+{
+  "id": "module-2-digital-twin/physics-simulation-gazebo",
+  "title": "Chapter 1 - Physics Simulation with Gazebo",
+  "description": "Why Digital Twins?",
+  "source": "@site/docs/module-2-digital-twin/01-physics-simulation-gazebo.md",
+  "sourceDirName": "module-2-digital-twin",
+  "slug": "/module-2-digital-twin/physics-simulation-gazebo",
+  "permalink": "/docs/module-2-digital-twin/physics-simulation-gazebo",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-org/physical-ai-book/tree/main/docs/module-2-digital-twin/01-physics-simulation-gazebo.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "Chapter 1 - Physics Simulation with Gazebo"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Module 2 Overview",
+    "permalink": "/docs/module-2-digital-twin/"
+  },
+  "next": {
+    "title": "Module 1: The Robotic Nervous System",
+    "permalink": "/docs/category/module-1-the-robotic-nervous-system"
+  }
+}

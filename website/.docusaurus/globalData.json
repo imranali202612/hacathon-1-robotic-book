@@ -1,0 +1,83 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "intro",
+              "path": "/docs/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2-digital-twin/index",
+              "path": "/docs/module-2-digital-twin/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2-digital-twin/physics-simulation-gazebo",
+              "path": "/docs/module-2-digital-twin/physics-simulation-gazebo",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3-ai-robot-brain/index",
+              "path": "/docs/module-3-ai-robot-brain/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module1-ros2-nervous-system/index",
+              "path": "/docs/module1-ros2-nervous-system/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module1-ros2-nervous-system/python-rclpy",
+              "path": "/docs/module1-ros2-nervous-system/python-rclpy",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module1-ros2-nervous-system/ros2-fundamentals",
+              "path": "/docs/module1-ros2-nervous-system/ros2-fundamentals",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module1-ros2-nervous-system/urdf-humanoids",
+              "path": "/docs/module1-ros2-nervous-system/urdf-humanoids",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/module-2-digital-twin",
+              "path": "/docs/category/module-2-digital-twin",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/module-1-the-robotic-nervous-system",
+              "path": "/docs/category/module-1-the-robotic-nervous-system",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/module-3-ai-robot-brain",
+              "path": "/docs/category/module-3-ai-robot-brain",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/docs/intro",
+                "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

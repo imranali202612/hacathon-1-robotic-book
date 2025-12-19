@@ -1,0 +1,28 @@
+{
+  "id": "module-2-digital-twin/index",
+  "title": "Module 2 Overview",
+  "description": "What You'll Learn",
+  "source": "@site/docs/module-2-digital-twin/index.md",
+  "sourceDirName": "module-2-digital-twin",
+  "slug": "/module-2-digital-twin/",
+  "permalink": "/docs/module-2-digital-twin/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-org/physical-ai-book/tree/main/docs/module-2-digital-twin/index.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "title": "Module 2 Overview"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Module 2: Digital Twin",
+    "permalink": "/docs/category/module-2-digital-twin"
+  },
+  "next": {
+    "title": "Chapter 1 - Physics Simulation with Gazebo",
+    "permalink": "/docs/module-2-digital-twin/physics-simulation-gazebo"
+  }
+}

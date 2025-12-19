@@ -1,0 +1,28 @@
+{
+  "id": "module1-ros2-nervous-system/ros2-fundamentals",
+  "title": "Chapter 1 - ROS 2 Fundamentals",
+  "description": "Why ROS 2 Exists",
+  "source": "@site/docs/module1-ros2-nervous-system/01-ros2-fundamentals.md",
+  "sourceDirName": "module1-ros2-nervous-system",
+  "slug": "/module1-ros2-nervous-system/ros2-fundamentals",
+  "permalink": "/docs/module1-ros2-nervous-system/ros2-fundamentals",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-org/physical-ai-book/tree/main/docs/module1-ros2-nervous-system/01-ros2-fundamentals.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "Chapter 1 - ROS 2 Fundamentals"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Module 1 Overview",
+    "permalink": "/docs/module1-ros2-nervous-system/"
+  },
+  "next": {
+    "title": "Chapter 2 - Python Agents with rclpy",
+    "permalink": "/docs/module1-ros2-nervous-system/python-rclpy"
+  }
+}

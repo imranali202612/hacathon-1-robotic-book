@@ -1,0 +1,28 @@
+{
+  "id": "module1-ros2-nervous-system/python-rclpy",
+  "title": "Chapter 2 - Python Agents with rclpy",
+  "description": "Python as the AI Control Layer",
+  "source": "@site/docs/module1-ros2-nervous-system/02-python-rclpy.md",
+  "sourceDirName": "module1-ros2-nervous-system",
+  "slug": "/module1-ros2-nervous-system/python-rclpy",
+  "permalink": "/docs/module1-ros2-nervous-system/python-rclpy",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-org/physical-ai-book/tree/main/docs/module1-ros2-nervous-system/02-python-rclpy.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "title": "Chapter 2 - Python Agents with rclpy"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 1 - ROS 2 Fundamentals",
+    "permalink": "/docs/module1-ros2-nervous-system/ros2-fundamentals"
+  },
+  "next": {
+    "title": "Chapter 3 - Humanoid Robot Description (URDF)",
+    "permalink": "/docs/module1-ros2-nervous-system/urdf-humanoids"
+  }
+}

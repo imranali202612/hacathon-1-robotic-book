@@ -1,0 +1,8 @@
+{
+  "label": "Module 2: Digital Twin",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn about physics simulation, high-fidelity rendering, and sensor simulation for humanoid robotics."
+  }
+}

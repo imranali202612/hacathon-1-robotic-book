@@ -1,0 +1,23 @@
+{
+  "id": "intro",
+  "title": "Welcome to Physical AI Book",
+  "description": "This book teaches AI engineers how to integrate AI software with humanoid robot bodies - bridging the gap between machine learning models and physical systems.",
+  "source": "@site/docs/intro.md",
+  "sourceDirName": ".",
+  "slug": "/intro",
+  "permalink": "/docs/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-org/physical-ai-book/tree/main/docs/intro.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "sidebar_position": 0
+  },
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "Module 2: Digital Twin",
+    "permalink": "/docs/category/module-2-digital-twin"
+  }
+}

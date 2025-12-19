@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "SlashCommand(/sp.specify:*)",
+      "Bash(powershell.exe:*)",
+      "Bash(npm start)",
+      "Bash(npm run build)",
+      "Bash(.specify/scripts/bash/create-phr.sh:*)",
+      "Bash(powershell:*)",
+      "Bash(git rev-parse:*)",
+      "Bash(test:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

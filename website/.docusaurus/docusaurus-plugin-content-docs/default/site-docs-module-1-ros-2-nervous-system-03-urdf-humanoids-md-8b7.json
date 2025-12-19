@@ -1,0 +1,28 @@
+{
+  "id": "module1-ros2-nervous-system/urdf-humanoids",
+  "title": "Chapter 3 - Humanoid Robot Description (URDF)",
+  "description": "What is URDF?",
+  "source": "@site/docs/module1-ros2-nervous-system/03-urdf-humanoids.md",
+  "sourceDirName": "module1-ros2-nervous-system",
+  "slug": "/module1-ros2-nervous-system/urdf-humanoids",
+  "permalink": "/docs/module1-ros2-nervous-system/urdf-humanoids",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-org/physical-ai-book/tree/main/docs/module1-ros2-nervous-system/03-urdf-humanoids.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4,
+    "title": "Chapter 3 - Humanoid Robot Description (URDF)"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 2 - Python Agents with rclpy",
+    "permalink": "/docs/module1-ros2-nervous-system/python-rclpy"
+  },
+  "next": {
+    "title": "Module 3: AI-Robot Brain",
+    "permalink": "/docs/category/module-3-ai-robot-brain"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "module1-ros2-nervous-system/index",
+  "title": "Module 1 Overview",
+  "description": "What You'll Learn",
+  "source": "@site/docs/module1-ros2-nervous-system/index.md",
+  "sourceDirName": "module1-ros2-nervous-system",
+  "slug": "/module1-ros2-nervous-system/",
+  "permalink": "/docs/module1-ros2-nervous-system/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-org/physical-ai-book/tree/main/docs/module1-ros2-nervous-system/index.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "title": "Module 1 Overview"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Module 1: The Robotic Nervous System",
+    "permalink": "/docs/category/module-1-the-robotic-nervous-system"
+  },
+  "next": {
+    "title": "Chapter 1 - ROS 2 Fundamentals",
+    "permalink": "/docs/module1-ros2-nervous-system/ros2-fundamentals"
+  }
+}

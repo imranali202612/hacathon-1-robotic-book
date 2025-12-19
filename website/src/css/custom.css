@@ -1,0 +1,614 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* ========================================
+   1. CSS CUSTOM PROPERTIES (VARIABLES)
+   ======================================== */
+
+:root {
+  /* Primary brand colors */
+  --custom-primary: #2563eb;      /* Blue 600 */
+  --custom-primary-dark: #1e40af; /* Blue 700 */
+  --custom-primary-darker: #1e3a8a; /* Blue 800 */
+  --custom-primary-darkest: #1e293b; /* Blue 900 */
+  --custom-primary-light: #3b82f6; /* Blue 500 */
+  --custom-primary-lighter: #60a5fa; /* Blue 400 */
+  --custom-primary-lightest: #93c5fd; /* Blue 300 */
+
+  /* Secondary/accent colors */
+  --custom-secondary: #64748b;    /* Slate 500 */
+  --custom-secondary-dark: #475569; /* Slate 600 */
+  --custom-secondary-light: #94a3b8; /* Slate 400 */
+  --custom-accent: #06b6d4;       /* Cyan 500 */
+  --custom-accent-dark: #0891b2;  /* Cyan 600 */
+  --custom-accent-light: #22d3ee; /* Cyan 400 */
+
+  /* Semantic colors */
+  --custom-success: #10b981;      /* Green 500 */
+  --custom-success-dark: #059669; /* Green 600 */
+  --custom-success-light: #34d399; /* Green 400 */
+  --custom-warning: #f59e0b;      /* Amber 500 */
+  --custom-warning-dark: #d97706; /* Amber 600 */
+  --custom-warning-light: #fbbf24; /* Amber 400 */
+  --custom-danger: #ef4444;       /* Red 500 */
+  --custom-danger-dark: #dc2626;  /* Red 600 */
+  --custom-danger-light: #f87171; /* Red 400 */
+  --custom-info: #3b82f6;         /* Blue 500 */
+  --custom-info-dark: #2563eb;    /* Blue 600 */
+  --custom-info-light: #60a5fa;   /* Blue 400 */
+
+  /* Backgrounds */
+  --custom-bg-base: #ffffff;
+  --custom-bg-surface: #f8fafc;   /* Slate 50 */
+  --custom-bg-elevated: #f1f5f9;  /* Slate 100 */
+  --custom-bg-overlay: rgba(0, 0, 0, 0.5);
+
+  /* Text colors */
+  --custom-text-primary: #0f172a; /* Slate 900 */
+  --custom-text-secondary: #475569; /* Slate 600 */
+  --custom-text-tertiary: #94a3b8; /* Slate 400 */
+  --custom-text-inverse: #ffffff;
+
+  /* Borders */
+  --custom-border-default: #e2e8f0; /* Slate 200 */
+  --custom-border-emphasis: #cbd5e1; /* Slate 300 */
+  --custom-border-subtle: #f1f5f9; /* Slate 100 */
+
+  /* Shadows */
+  --custom-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --custom-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --custom-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+  /* Font families */
+  --custom-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                      'Roboto', 'Oxygen', 'Ubuntu', 'Helvetica Neue', sans-serif;
+  --custom-font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas',
+                      'Monaco', 'Courier New', monospace;
+
+  /* Type scale (modular scale: 1.25 ratio) */
+  --custom-font-size-xs: 0.75rem;   /* 12px */
+  --custom-font-size-sm: 0.875rem;  /* 14px */
+  --custom-font-size-base: 1rem;    /* 16px */
+  --custom-font-size-lg: 1.125rem;  /* 18px */
+  --custom-font-size-xl: 1.25rem;   /* 20px */
+  --custom-font-size-2xl: 1.5rem;   /* 24px */
+  --custom-font-size-3xl: 1.875rem; /* 30px */
+  --custom-font-size-4xl: 2.25rem;  /* 36px */
+
+  /* Line heights */
+  --custom-line-height-tight: 1.25;
+  --custom-line-height-normal: 1.5;
+  --custom-line-height-relaxed: 1.7;
+
+  /* Font weights */
+  --custom-font-weight-normal: 400;
+  --custom-font-weight-medium: 500;
+  --custom-font-weight-semibold: 600;
+  --custom-font-weight-bold: 700;
+
+  /* Spacing scale */
+  --custom-space-xs: 0.25rem;   /* 4px */
+  --custom-space-sm: 0.5rem;    /* 8px */
+  --custom-space-md: 1rem;      /* 16px */
+  --custom-space-lg: 1.5rem;    /* 24px */
+  --custom-space-xl: 2rem;      /* 32px */
+  --custom-space-2xl: 3rem;     /* 48px */
+  --custom-space-3xl: 4rem;     /* 64px */
+
+  /* Border radius */
+  --custom-radius-sm: 0.25rem;  /* 4px */
+  --custom-radius-md: 0.375rem; /* 6px */
+  --custom-radius-lg: 0.5rem;   /* 8px */
+  --custom-radius-xl: 0.75rem;  /* 12px */
+  --custom-radius-full: 9999px;
+
+  /* Map custom properties to Infima variables */
+  --ifm-color-primary: var(--custom-primary);
+  --ifm-color-primary-dark: var(--custom-primary-dark);
+  --ifm-color-primary-darker: var(--custom-primary-darker);
+  --ifm-color-primary-darkest: var(--custom-primary-darkest);
+  --ifm-color-primary-light: var(--custom-primary-light);
+  --ifm-color-primary-lighter: var(--custom-primary-lighter);
+  --ifm-color-primary-lightest: var(--custom-primary-lightest);
+
+  --ifm-color-success: var(--custom-success);
+  --ifm-color-info: var(--custom-info);
+  --ifm-color-warning: var(--custom-warning);
+  --ifm-color-danger: var(--custom-danger);
+
+  --ifm-font-family-base: var(--custom-font-sans);
+  --ifm-font-family-monospace: var(--custom-font-mono);
+  --ifm-line-height-base: var(--custom-line-height-relaxed);
+
+  --ifm-code-font-size: 0.9em;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode variables */
+[data-theme='dark'] {
+  /* Dark mode backgrounds */
+  --custom-bg-base: #0f172a;      /* Slate 900 */
+  --custom-bg-surface: #1e293b;   /* Slate 800 */
+  --custom-bg-elevated: #334155;  /* Slate 700 */
+  --custom-bg-overlay: rgba(0, 0, 0, 0.7);
+
+  /* Dark mode text colors */
+  --custom-text-primary: #f1f5f9; /* Slate 100 */
+  --custom-text-secondary: #cbd5e1; /* Slate 300 */
+  --custom-text-tertiary: #64748b; /* Slate 500 */
+  --custom-text-inverse: #0f172a;
+
+  /* Dark mode borders */
+  --custom-border-default: #334155; /* Slate 700 */
+  --custom-border-emphasis: #475569; /* Slate 600 */
+  --custom-border-subtle: #1e293b; /* Slate 800 */
+
+  /* Dark mode shadows */
+  --custom-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --custom-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --custom-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+
+  /* Adjust primary colors for dark mode */
+  --custom-primary: #3b82f6;      /* Blue 500 - brighter for contrast */
+  --custom-primary-light: #60a5fa; /* Blue 400 */
+  --custom-primary-lighter: #93c5fd; /* Blue 300 */
+
+  /* Map to Infima dark mode */
+  --ifm-color-primary: var(--custom-primary);
+  --ifm-color-primary-dark: var(--custom-primary-dark);
+  --ifm-color-primary-darker: var(--custom-primary-darker);
+  --ifm-color-primary-darkest: var(--custom-primary-darkest);
+  --ifm-color-primary-light: var(--custom-primary-light);
+  --ifm-color-primary-lighter: var(--custom-primary-lighter);
+  --ifm-color-primary-lightest: var(--custom-primary-lightest);
+
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+}
+
+/* ========================================
+   2. TYPOGRAPHY
+   ======================================== */
+
+body {
+  font-family: var(--custom-font-sans);
+  font-size: var(--custom-font-size-base);
+  line-height: var(--custom-line-height-relaxed);
+  color: var(--custom-text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--custom-font-sans);
+  font-weight: var(--custom-font-weight-bold);
+  line-height: var(--custom-line-height-tight);
+  color: var(--custom-text-primary);
+}
+
+h1 {
+  font-size: var(--custom-font-size-4xl);
+  margin-bottom: var(--custom-space-lg);
+}
+
+h2 {
+  font-size: var(--custom-font-size-3xl);
+  margin-top: var(--custom-space-xl);
+  margin-bottom: var(--custom-space-md);
+}
+
+h3 {
+  font-size: var(--custom-font-size-2xl);
+  margin-top: var(--custom-space-lg);
+  margin-bottom: var(--custom-space-md);
+}
+
+h4 {
+  font-size: var(--custom-font-size-xl);
+  margin-top: var(--custom-space-lg);
+  margin-bottom: var(--custom-space-sm);
+}
+
+h5 {
+  font-size: var(--custom-font-size-lg);
+  margin-top: var(--custom-space-md);
+  margin-bottom: var(--custom-space-sm);
+}
+
+h6 {
+  font-size: var(--custom-font-size-base);
+  margin-top: var(--custom-space-md);
+  margin-bottom: var(--custom-space-sm);
+}
+
+code,
+pre {
+  font-family: var(--custom-font-mono);
+  font-size: 0.9em;
+}
+
+code {
+  background: var(--custom-bg-surface);
+  color: var(--custom-primary);
+  padding: 0.2em 0.4em;
+  border-radius: var(--custom-radius-sm);
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* ========================================
+   3. COLOR SYSTEM
+   ======================================== */
+/* Colors defined in section 1 (CSS Custom Properties) */
+
+/* ========================================
+   4. LAYOUT & SPACING
+   ======================================== */
+/* Spacing defined in section 1 (CSS Custom Properties) */
+
+/* ========================================
+   5. NAVIGATION (NAVBAR, SIDEBAR, FOOTER)
+   ======================================== */
+
+/* Sidebar Navigation */
+.menu__list-item--collapsed,
+.menu__list-item {
+  margin: var(--custom-space-xs) 0;
+}
+
+/* Module headers (category headers) */
+.menu__link--sublist {
+  text-transform: uppercase;
+  font-size: var(--custom-font-size-xs);
+  font-weight: var(--custom-font-weight-semibold);
+  color: var(--custom-text-tertiary);
+  background: var(--custom-bg-surface);
+  padding: 0.75rem 1rem;
+  border-radius: var(--custom-radius-md);
+  margin-bottom: var(--custom-space-xs);
+}
+
+/* Add emoji icons to module headers */
+.menu__link--sublist::before {
+  content: '📚 ';
+  margin-right: var(--custom-space-xs);
+}
+
+/* Chapter links */
+.menu__link {
+  padding: 0.5rem 1rem;
+  border-radius: var(--custom-radius-sm);
+  transition: background-color 0.2s ease;
+  color: var(--custom-text-secondary);
+}
+
+.menu__link:hover {
+  background: var(--custom-bg-surface);
+  color: var(--custom-text-primary);
+  text-decoration: none;
+}
+
+/* Active chapter */
+.menu__link--active {
+  font-weight: var(--custom-font-weight-semibold);
+  color: var(--custom-primary) !important;
+  background: var(--custom-bg-elevated);
+  border-left: 4px solid var(--custom-primary);
+  padding-left: calc(1rem - 4px);
+}
+
+.menu__link--active:hover {
+  background: var(--custom-bg-elevated);
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: var(--custom-shadow-sm);
+  backdrop-filter: blur(8px);
+  background: color-mix(in srgb, var(--custom-bg-base) 95%, transparent);
+  border-bottom: 1px solid var(--custom-border-default);
+}
+
+.navbar__logo {
+  height: 32px;
+  margin-right: var(--custom-space-sm);
+}
+
+.navbar__link {
+  font-weight: var(--custom-font-weight-medium);
+  color: var(--custom-text-primary);
+  transition: color 0.2s ease;
+}
+
+.navbar__link:hover {
+  color: var(--custom-primary);
+  text-decoration: none;
+}
+
+/* Theme toggle button */
+.navbar__item button[title*='theme'],
+.navbar__item button[title*='Switch'] {
+  border-radius: var(--custom-radius-sm);
+  padding: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.navbar__item button[title*='theme']:hover,
+.navbar__item button[title*='Switch']:hover {
+  background: var(--custom-bg-surface);
+}
+
+/* Footer */
+.footer {
+  background: var(--custom-bg-base);
+  border-top: 1px solid var(--custom-border-default);
+  padding: var(--custom-space-xl) 0;
+}
+
+.footer__title {
+  font-size: var(--custom-font-size-sm);
+  font-weight: var(--custom-font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--custom-text-tertiary);
+  margin-bottom: var(--custom-space-md);
+}
+
+.footer__link-item {
+  color: var(--custom-text-secondary);
+  transition: color 0.2s ease;
+}
+
+.footer__link-item:hover {
+  color: var(--custom-primary);
+  text-decoration: none;
+}
+
+/* ========================================
+   6. CONTENT ELEMENTS
+   ======================================== */
+
+/* Code Blocks */
+pre[class*='language-'] {
+  background: var(--custom-bg-surface);
+  border: 1px solid var(--custom-border-default);
+  border-radius: var(--custom-radius-lg);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+}
+
+code[class*='language-'] {
+  background: transparent;
+  color: var(--custom-text-primary);
+  font-family: var(--custom-font-mono);
+  font-size: 0.9em;
+  line-height: var(--custom-line-height-normal);
+}
+
+/* Prism Light Theme Overrides */
+:root {
+  --prism-color-keyword: #2563eb;     /* Blue - keywords */
+  --prism-color-string: #10b981;      /* Green - strings */
+  --prism-color-function: #7c3aed;    /* Violet - functions */
+  --prism-color-comment: #64748b;     /* Slate - comments */
+  --prism-color-number: #d97706;      /* Amber - numbers */
+  --prism-color-operator: #475569;    /* Dark slate - operators */
+  --prism-color-punctuation: #64748b; /* Slate - punctuation */
+}
+
+[data-theme='dark'] {
+  --prism-color-keyword: #60a5fa;     /* Light blue - keywords */
+  --prism-color-string: #34d399;      /* Light green - strings */
+  --prism-color-function: #a78bfa;    /* Light violet - functions */
+  --prism-color-comment: #94a3b8;     /* Light slate - comments */
+  --prism-color-number: #fbbf24;      /* Light amber - numbers */
+  --prism-color-operator: #cbd5e1;    /* Light slate - operators */
+  --prism-color-punctuation: #94a3b8; /* Light slate - punctuation */
+}
+
+.token.keyword,
+.token.tag {
+  color: var(--prism-color-keyword);
+}
+
+.token.string,
+.token.attr-value {
+  color: var(--prism-color-string);
+}
+
+.token.function {
+  color: var(--prism-color-function);
+}
+
+.token.comment {
+  color: var(--prism-color-comment);
+  font-style: italic;
+}
+
+.token.number {
+  color: var(--prism-color-number);
+}
+
+.token.operator {
+  color: var(--prism-color-operator);
+}
+
+.token.punctuation {
+  color: var(--prism-color-punctuation);
+}
+
+/* Copy button */
+.clean-btn {
+  background: var(--custom-primary);
+  color: white;
+  border-radius: var(--custom-radius-sm);
+  padding: 0.5rem 1rem;
+  font-size: var(--custom-font-size-sm);
+  font-weight: var(--custom-font-weight-medium);
+  opacity: 1;
+  transition: background-color 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.clean-btn:hover {
+  background: var(--custom-primary-dark);
+}
+
+/* Inline code */
+:not(pre) > code {
+  background: var(--custom-bg-surface);
+  color: var(--custom-primary);
+  padding: 0.2em 0.4em;
+  border-radius: var(--custom-radius-sm);
+  font-size: 0.9em;
+  border: 1px solid var(--custom-border-default);
+}
+
+/* Tables */
+.markdown table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: var(--custom-space-lg) 0;
+  border: 1px solid var(--custom-border-default);
+  border-radius: var(--custom-radius-md);
+  overflow: hidden;
+}
+
+.markdown table th {
+  background: var(--custom-bg-elevated);
+  color: var(--custom-text-primary);
+  font-weight: var(--custom-font-weight-semibold);
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 2px solid var(--custom-border-emphasis);
+}
+
+.markdown table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--custom-border-default);
+}
+
+.markdown table tr:nth-child(even) {
+  background: var(--custom-bg-surface);
+}
+
+.markdown table tr:hover {
+  background: var(--custom-bg-elevated);
+  transition: background-color 0.2s ease;
+}
+
+.markdown table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Admonitions Base */
+.admonition {
+  border-left-width: 4px;
+  border-radius: var(--custom-radius-sm);
+  padding: var(--custom-space-md);
+  margin: var(--custom-space-lg) 0;
+  border-left-style: solid;
+}
+
+.admonition-heading {
+  font-weight: var(--custom-font-weight-semibold);
+  margin-bottom: var(--custom-space-sm);
+  display: flex;
+  align-items: center;
+  font-size: var(--custom-font-size-base);
+}
+
+/* Tip Admonition (Green) */
+.admonition-tip {
+  border-left-color: var(--custom-success);
+  background: color-mix(in srgb, var(--custom-success) 10%, transparent);
+}
+
+.admonition-tip .admonition-heading::before {
+  content: '💡 ';
+  margin-right: var(--custom-space-xs);
+}
+
+/* Info Admonition (Blue) */
+.admonition-info {
+  border-left-color: var(--custom-info);
+  background: color-mix(in srgb, var(--custom-info) 10%, transparent);
+}
+
+.admonition-info .admonition-heading::before {
+  content: 'ℹ️ ';
+  margin-right: var(--custom-space-xs);
+}
+
+/* Warning Admonition (Yellow) */
+.admonition-warning {
+  border-left-color: var(--custom-warning);
+  background: color-mix(in srgb, var(--custom-warning) 10%, transparent);
+}
+
+.admonition-warning .admonition-heading::before {
+  content: '⚠️ ';
+  margin-right: var(--custom-space-xs);
+}
+
+/* Danger Admonition (Red) */
+.admonition-danger {
+  border-left-color: var(--custom-danger);
+  background: color-mix(in srgb, var(--custom-danger) 10%, transparent);
+}
+
+.admonition-danger .admonition-heading::before {
+  content: '🚫 ';
+  margin-right: var(--custom-space-xs);
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--custom-primary);
+  background: var(--custom-bg-surface);
+  padding: var(--custom-space-md) var(--custom-space-lg);
+  margin: var(--custom-space-lg) 0;
+  border-radius: var(--custom-radius-sm);
+  font-style: italic;
+  color: var(--custom-text-secondary);
+}
+
+blockquote p:first-child {
+  margin-top: 0;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Images */
+.markdown img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--custom-radius-md);
+  margin: var(--custom-space-lg) auto;
+  display: block;
+  box-shadow: var(--custom-shadow-md);
+}
+
+/* Horizontal Rules */
+hr {
+  border: none;
+  border-top: 2px solid var(--custom-border-default);
+  margin: var(--custom-space-2xl) 0;
+}
+
+/* ========================================
+   7. RESPONSIVE DESIGN
+   ======================================== */
+/* Responsive styles will be added in Phase 4 */
+
+/* ========================================
+   8. DARK MODE OVERRIDES
+   ======================================== */
+/* Dark mode overrides defined in section 1 (CSS Custom Properties) */

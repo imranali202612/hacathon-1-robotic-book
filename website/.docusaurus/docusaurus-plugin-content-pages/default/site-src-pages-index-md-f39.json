@@ -1,0 +1,9 @@
+{
+  "type": "mdx",
+  "permalink": "/",
+  "source": "@site/src/pages/index.md",
+  "title": "Physical AI Book",
+  "description": "Welcome to the Physical AI Book - a comprehensive guide for AI engineers entering humanoid robotics.",
+  "frontMatter": {},
+  "unlisted": false
+}
